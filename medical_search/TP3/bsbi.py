@@ -306,6 +306,7 @@ class BSBIIndex:
 
         """
         # TODO
+        nltk.download('stopwords')
         if len(self.term_id_map) == 0 or len(self.doc_id_map) == 0:
             self.load()
 
