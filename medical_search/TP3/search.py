@@ -1,5 +1,5 @@
-from bsbi import BSBIIndex
-from compression import VBEPostings
+from .bsbi import BSBIIndex
+from .compression import VBEPostings
 
 def search_bm25(query):
     BSBI_instance = BSBIIndex(data_dir = 'collection', \
@@ -18,6 +18,7 @@ def search_bm25(query):
         f.close()
     # for (score, doc) in BSBI_instance.retrieve_bm25(query, k=100):
     #     print(f"{doc:30} {score:>.3f}")
+    print(documents)
     return documents
         
 

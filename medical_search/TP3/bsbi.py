@@ -7,13 +7,13 @@ import math
 import nltk
 import lightgbm as lgb
 
-from index import InvertedIndexReader, InvertedIndexWriter
-from util import IdMap, sorted_merge_posts_and_tfs
-from compression import StandardPostings, VBEPostings
+from .index import InvertedIndexReader, InvertedIndexWriter
+from .util import IdMap, sorted_merge_posts_and_tfs
+from .compression import StandardPostings, VBEPostings
 from tqdm import tqdm
 from nltk.stem import PorterStemmer
 from nltk.tokenize import RegexpTokenizer
-from letor import Letor
+# from letor import Letor
 
 class BSBIIndex:
     """
