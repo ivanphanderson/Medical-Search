@@ -1,3 +1,5 @@
+import os
+
 from .bsbi import BSBIIndex
 from .compression import VBEPostings
 
@@ -9,13 +11,13 @@ def search_bm25(query):
     documents = []
     doc_name = []
     for (score, doc) in BSBI_instance.retrieve_bm25(query, k=100):
-
-        f = open(doc, "r")
-        doc_content = f.read()
-        # documents.append(self.letor.features(query.split(), doc_content.split()))
-        documents.append(doc_content)
-        doc_name.append(doc)
-        f.close()
+        with open(os.path.join(doc), 'r') as f:
+            # f = open(doc, "r")
+            doc_content = f.read()
+            # documents.append(self.letor.features(query.split(), doc_content.split()))
+            documents.append(doc_content)
+            doc_name.append(doc)
+            # f.close()
     # for (score, doc) in BSBI_instance.retrieve_bm25(query, k=100):
     #     print(f"{doc:30} {score:>.3f}")
     print(documents)
