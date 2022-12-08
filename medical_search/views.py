@@ -9,7 +9,7 @@ def search(request):
         response = {'document_content': document_content}
         return render(request, 'index.html', response)
     document_content = search_bm25('alkylated with radioactive iodoacetate')
-    print(document_content)
+    # print(document_content)
     # response = {}
     response = {'document_content': document_content}
     return render(request, 'index.html', response)
