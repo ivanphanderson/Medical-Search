@@ -17,7 +17,8 @@ def search_bm25(query):
     # print(FILE_DIR)
     # print(PARENT_DIR)
     for (score, doc) in BSBI_instance.retrieve_bm25(query, k=100):
-        with open(os.path.join(PARENT_DIR, doc), 'r') as f:
+        doc1 = doc.replace("\\", "/")
+        with open(os.path.join(PARENT_DIR, doc1), 'r') as f:
             # f = open(doc, "r")
             doc_content = f.read()
             # documents.append(self.letor.features(query.split(), doc_content.split()))
