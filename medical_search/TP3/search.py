@@ -9,28 +9,17 @@ def search_bm25(query):
                             output_dir = 'index')
     
     documents = []
-    doc_name = []
     FILE_DIR = os.path.dirname(os.path.abspath(__file__))
-    # absolute path to this file's root directory
     PARENT_DIR = os.path.join(FILE_DIR, os.pardir, os.pardir) 
-    # PARENT_OF_PARENT_DIR = os.path.join(PARENT_DIR, os.pardir)
-    # print(FILE_DIR)
-    # print(PARENT_DIR)
-    for (score, doc) in BSBI_instance.retrieve_bm25(query, k=100):
+
+    for (score, doc) in BSBI_instance.retrieve_bm25(query, k=1000):
         doc1 = doc.replace("\\", "/")
         with open(os.path.join(PARENT_DIR, doc1), 'r') as f:
-            # f = open(doc, "r")
             doc_content = f.read()
-            # documents.append(self.letor.features(query.split(), doc_content.split()))
-            documents.append(doc_content)
-            doc_name.append(doc)
-            # f.close()
-    # for (score, doc) in BSBI_instance.retrieve_bm25(query, k=100):
-    #     print(f"{doc:30} {score:>.3f}")
-    # print(documents)
-    # absolute path to this file
-    
-    # print(PARENT_OF_PARENT_DIR)
+            if len(doc_content) > 500:
+                doc_content = doc_content[:500] + " ..."
+            documents.append((doc.split("\\"), doc_content))
+            
     return documents
         
 

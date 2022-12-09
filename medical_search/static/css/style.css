@@ -24,17 +24,6 @@ html, body {
     height: auto;
 }
 
-#searchbarmic {
-    height: 45px;
-    width: 35px;
-    margin-left: auto;
-    background-color: white;
-}
-
-#searchbarmic img {
-    height: 25px;
-}
-
 #searchbarbutton {
     height: 45px;
     width: 55px;
@@ -95,17 +84,6 @@ html, body {
     outline: none;
 }
 
-#boxesicon {
-    width: 25px;
-    height: 25px;
-    background-image: url('images/boxes.png');
-    opacity: 0.6;
-    background-size: 26px;
-    position: absolute;
-    right: 130px;
-    bottom: 14px;
-}
-
 #optionsmenuactive::after {
     content: '';
     display: block;
@@ -156,7 +134,7 @@ html, body {
 .searchresult a {
     font-size: 14px;
     line-height: 14px;
-    color: green;
+    color: black;
     margin-bottom: 0px;
 }
 
@@ -171,26 +149,11 @@ html, body {
 }
 
 #bellicon {
-    width: 20px;
+    width: 160px;
     height: 20px;
-    background-color: rgb(105, 105, 105);
-    background-image: url('images/bell.png');
-    background-size: 12px;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    border-radius: 30px;
     position: absolute;
-    right: 90px;
-    bottom: 18px;
-}
-
-#profileimage {
-    border-radius: 50px;
-    width: 32px;
-    height: 32px;
-    position: absolute;
-    right: 40px;
-    bottom: 12px;
+    right: 70px;
+    bottom: 30px;
 }
 
 #optionsbar {
@@ -235,44 +198,12 @@ html, body {
     color: rgb(82, 82, 82);
 }
 
-.relatedsearches h3 {
-    font-weight: normal;
-    font-size: 19px;
-    margin-top: 40px;
-    margin-bottom: 10px;
-}
-
-.relatedlists ul {
-    list-style: none;
-    color: rgb(29, 1, 189);
-    padding-left: 0px;
-    font-size: 14px;
-    margin-bottom: 50px;
-}
-
-.relatedlists {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 300px;
-}
-
-.relatedlists ul li {
-    margin-bottom: 8px;
-}
-
-.pagelist {
-    list-style: none;
-    color: rgb(29, 135, 255);
-    display: flex;
-    flex-direction: row;
-    font-size: 12px;
-    margin-bottom: 30px;
-    margin-left: 100px;
+.pagelistprevious {
+    margin-left: 140px;
+    font-size: 20px;
 }
 
 .pagelistprevious::before {
-    content: '<';
     display: block;
     position: absolute;
     right: 12px;
@@ -290,17 +221,12 @@ html, body {
     top: -35px;
     width: 40px;
     height: 40px;
-    background-image: url('images/g.png');
     background-repeat: no-repeat;
     background-size: 28px;
 }
 
-.pagelistfirst {
-    margin-left: 20px;
-    font-size: 13px;
-}
 
-.pagelistnumber::before, .pagelistfirst::before {
+.pagelistfirst::before {
     content: '';
     display: block;
     position: absolute;
@@ -311,19 +237,6 @@ html, body {
     height: 10px;
     background-color: white;
     z-index: 3;
-}
-
-.pagelistnumber::after {
-    content: '';
-    display: block;
-    position: absolute;
-    left: -6px;
-    top: -25px;
-    border-radius: 50px;
-    width: 18px;
-    height: 18px;
-    background-color: rgb(255, 196, 0);
-    z-index: 2;
 }
 
 .pagelistfirst::after {
@@ -339,18 +252,12 @@ html, body {
     z-index: 2;
 }
 
-.pagelist li {
-    margin-right: 15px;
-    position: relative;
-}
-
 .pagelistnext {
-    margin-left: 40px;
-    font-size: 13px;
+    margin-left: 550px;
+    font-size: 20px;
 }
 
 .pagelistnext::before {
-    content: '>';
     display: block;
     position: absolute;
     left: 5px;
@@ -368,7 +275,6 @@ html, body {
     top: -37px;
     width: 50px;
     height: 50px;
-    background-image: url('images/gle.png');
     background-repeat: no-repeat;
     background-size: 48px;
 }
@@ -389,9 +295,10 @@ html, body {
     list-style: none;
     display: flex;
     flex-direction: row;
-    margin-top: 0px;
+    margin-top: 10px;
     margin-left: 135px;
     margin-bottom: 0px;
+    padding-top: 10px;
     padding-bottom: 10px;
 }
 
