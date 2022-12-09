@@ -14,7 +14,7 @@ def search(request):
     if request.GET.get('query') != None:
         query = request.GET.get('query')
     else:
-        response = {'message': 'Type something in the search box and get the result!'}
+        response = {'message': 'Welcome to Medical Search!\nType something in the search box and get the result!'}
         return render(request, 'index.html', response)
 
     document_path_and_content = search_bm25(query)
