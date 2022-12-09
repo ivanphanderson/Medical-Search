@@ -60,13 +60,13 @@
 
             <div class="pagebar">
                     {% if curr_page != 1 %}
-                    <a class="pagelistprevious" href="/?query={{query}}&page={{prev_page}}">Previous</a>
+                    <a class="pagelistprevious" href="/?query={{query}}&page={{prev_page}}">Previous Page</a>
                     {% else %}
-                    <a style="margin-left: 15vw;"></a>
+                    <a style="margin-left: 18vw;"></a>
                     {% endif %}
                     
                     {% if curr_page != total_page %}
-                    <a class="pagelistnext" href="/?query={{query}}&page={{next_page}}">Next</a>
+                    <a class="pagelistnext" href="/?query={{query}}&page={{next_page}}">Next Page</a>
                     {% endif %}
                     <p style="margin-left: 430px; margin-top: -20px;">Page {{curr_page}} of {{total_page}} </p>
             </div>
